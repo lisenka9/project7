@@ -1,0 +1,39 @@
+.popup__button {
+  width: calc(100% - 72px);
+  height: 50px;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border-radius: 2px;
+  border: none;
+  position: absolute;
+  bottom: 36px;
+  left: 36px;
+  right: 36px;
+  transition: visibility 0s, background 0.3s;
+}
+
+/* Стили для кнопки в неактивном состоянии */
+.popup__button:disabled {
+  cursor: default;
+  pointer-events: none;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.2);
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+}
+
+.popup__button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 568px) {
+  .popup__button {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
